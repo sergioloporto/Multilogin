@@ -2,6 +2,7 @@ import * as React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Img from "gatsby-image";
 import { useMediaQuery } from "react-responsive";
+import PropTypes from "prop-types";
 
 import '@splidejs/react-splide/css';
 import "./slider.scss";
@@ -12,15 +13,15 @@ const Slider = ({ data }) => {
   return (
     <Splide
       options={{ rewind: true, width: isTablet ? 650 : 522 }}
-      aria-label="React Splide Example"
+      aria-label="Testimonials"
     >
       {data.map((el, i) => {
         const { author1, author2, text1, text2, image1, image2 } =
           el.node.frontmatter;
 
         return (
-          <React.Fragment>
-            <SplideSlide hasTrack={false}>
+          <React.Fragment key={author1+i}>
+            <SplideSlide>
               <div className="slide-container">
                 <div className="single-quote upper-quote">
                   <Img fluid={image1?.childImageSharp.fixed} alt={author1} />
@@ -44,6 +45,10 @@ const Slider = ({ data }) => {
       })}
     </Splide>
   );
+};
+
+Img.propTypes = {
+  fluid: PropTypes.object,
 };
 
 export { Slider };
