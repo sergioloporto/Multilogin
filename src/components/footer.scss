@@ -1,0 +1,31 @@
+footer {
+  position: sticky;
+  width: 100%;
+  max-width: 1282px;
+  height: 288px;
+  margin: auto;
+  .white-row {
+    background-color: $white;
+    height: 27px;
+  }
+  .footer-content {
+    height: 100%;
+    padding: 46px;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    .nav-item {
+      line-height: 26px;
+      .nav-link {
+        color: $white;
+        text-decoration: none;
+        font-weight: 300;
+        &.active {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

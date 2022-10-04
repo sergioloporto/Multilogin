@@ -1,0 +1,18 @@
+//Here you can customize bootstrap
+$primary: #0066ff;
+$white: #fff;
+
+* {
+    font-size: 16px;
+}
+body {
+    font-family: "Rubik";
+    font-weight: 400;
+}
+// .all-layout {
+//   margin: 0 16%;
+// }
+
+@import "~bootstrap/scss/bootstrap";
+@import "../components/navbar.scss";
+@import "../components/footer.scss";

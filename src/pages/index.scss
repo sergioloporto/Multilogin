@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1282px;
+  .offer-container {
+    display: flex;
+    width: 40%;
+
+    .offer-text {
+      display: flex;
+      flex-direction: column;
+      gap: 29px;
+      width: 60%;
+    }
+
+    .offer-graphics {
+      display: flex;
+      width: 40%;
+      align-items: center;
+      .offer-image {
+        position: relative;
+        .segment {
+          position: absolute;
+          top: -48%;
+          left: 37%;
+        }
+      }
+    }
+
+    .offer-title {
+      font-size: 42px;
+    }
+    .offer-instructions {
+      font-size: 20px;
+      font-weight: 300;
+    }
+  }
+  .slider-container {
+    margin-right: 65px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 1290px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    .offer-container {
+      width: unset;
+    }
+    .offer-graphics {
+      justify-content: end;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .container .offer-container {
+    .offer-graphics {
+      display: none;
+    }
+    .offer-text {
+      width: 100%;
+    }
+  }
+}
